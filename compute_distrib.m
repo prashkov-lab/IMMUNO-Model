@@ -175,7 +175,7 @@ endfor
 
 clearvars g_max b_M g_M p_b p_g b_max indexs
 
-% power: m = 3
+% fixed power: m = 3
   data=dlmread("2026_myDF_new3agg.dat",' ',1,0);
     indexs=data(1:6:end,1);
   b_max=data(1:6:end,3);

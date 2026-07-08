@@ -106,7 +106,7 @@ clearvars data g_max b_M g_M p_b p_g indexs
     b_M=randn(nsamp,1)*b_M_sd(j)+b_M_m(j);
     g_M = randn(nsamp,1)*g_M_sd(j)+g_M_m(j);
     p_b = randn(nsamp,1)*p_b_sd(j)+p_b_m(j);
-    p_g = ones(nsamp,1)*p_g_m(j);
+    p_g = randn(nsamp,1)*p_g_sd(j)+p_g_m(j);
 
     b_M=b_M(g_max>1e-99);
     g_M=g_M(g_max>1e-99);

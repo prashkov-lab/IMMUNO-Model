@@ -79,9 +79,9 @@ endfor
   UB =15 ;
 
 
-  % first scenario
+  % ansatz 1
 clearvars data g_max b_M g_M p_b p_g indexs
-  % first scenario
+  % all variables estimated
 
   data=dlmread("2026_myDF_new1agg.dat",' ',1,0);
     indexs=data(1:7:end,1);
@@ -175,6 +175,7 @@ endfor
 
 clearvars g_max b_M g_M p_b p_g b_max indexs
 
+% power: m = 3
   data=dlmread("2026_myDF_new3agg.dat",' ',1,0);
     indexs=data(1:6:end,1);
   b_max=data(1:6:end,3);
@@ -261,9 +262,9 @@ endfor
 endfor
 
 
-## model 2
+% ansatz model 2
 
-
+% all parameters estimated
 data=0;
   UB =15;
     data=dlmread ("2026_myDF_new5agg.dat",' ',1,0);
@@ -377,7 +378,8 @@ data=0;
   b_M_m=data(4:5:end,1);
   b_M_sd=data(4:5:end,2);
 
-##
+%% ansatz 2
+%% fixed power: m = 4
   for j= (6:13)
      # generate random values randn ~ N(0,1) -> p_b_m+p_b_sd*Z
     g_max = randn(nsamp,1)*g_max_sd(j) + g_max_m(j);
